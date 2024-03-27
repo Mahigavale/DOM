@@ -16,6 +16,9 @@
     <button class="button button5" type="button" onclick="checkevenodd()">EvenOdd</button>
     <h4 id="result1"></h4>
 
+    <button class="button button5" type="button" onclick="palindrome()">Palindrome</button>
+    <h4 id="result2"></h4>
+
     <script>
    function checkprime()
    {
@@ -58,6 +61,27 @@
         str2="the given number is odd !";
     }
       document.getElementById('result1').innerHTML=str2;
+   }
+
+   function palindrome()
+   {
+    let num=document.getElementById('number').value;
+
+let str1=num.toString(); 
+let arr2=str1.split('');
+let str2=arr2.reverse();
+let str21=str2.join('');
+let strresult="";
+if(str1==str21)
+{
+    strresult=`the given number :${num} is the palindorme number `;
+}
+else
+{
+    strresult=`the given number : ${num}  is not palindrome number `;
+}
+document.getElementById('result2').innerHTML=strresult;
+    
    }
 
     </script>
