@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basic.css">
+    <title>Live Time</title>
+</head>
+<body style="text-align: center;">
+    <div class="div1">
+    <button class="button button5" onclick="document.getElementById('time').innerHTML=d" >Click !</button>
+    <h2 id="time" value="00:00:00">Time will be displayed here!</h2>
+
+    <script>
+   const d= new Date();
+
+
+
+        </script>
+        </div>
+        <div class="prime" style="text-align: center;  background-color: aquamarine;">
+            <h3>Please enter the number to check whether it is prime or not !</h3>
+
+           <input type="number"   id="result" value="00">   
+           <button class="button button5" type="button" onclick="document.getElementById('demo').innerHTML=num">click me !</button>
+           <h4 id="demo" >Result</h4>
+           
+           <script>
+              
+              let num=document.getElementById('result').value;
+              console.log(12);
+              console.log(num);
+
+ let flag=new Boolean('true');
+
+ let str="";
+for(let i=2;i<num;i++)
+{
+    if(num%i==0)
+    {
+        //console.log("number is not prime !");
+        flag=false;
+    }
+}
+
+if(flag==true)
+{
+    str="the given number is prime !";
+}
+else{
+    str="the number is not prime !";
+}
+
+           </script>
+
+        </div>
+</body>
+</html>

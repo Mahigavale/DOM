@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basic.css">
+    <title>Check</title>
+</head>
+<body style="text-align: center; background-color: yellow;">
+    <input type="number" id="number" value="0">
+
+    <button class="button button5" type="button" onclick="checkprime()">PrimeComposite</button>
+
+    <h4 id="result"></h4>
+
+    <button class="button button5" type="button" onclick="checkevenodd()">EvenOdd</button>
+    <h4 id="result1"></h4>
+
+    <script>
+   function checkprime()
+   {
+
+  let num=document.getElementById('number').value;
+  let str="";
+
+   let flag=true;
+   
+   for(let i=2;i<num;i++)
+   {
+   
+     if(num%i==0)
+     {
+        flag=false;
+        break;
+     }
+   }
+   if(flag==true)
+   {
+     str="the number is prime!";
+   }
+   else{
+    str="the number is  composite !"
+   }
+
+ document.getElementById('result').innerHTML=str;
+
+   }
+
+   function checkevenodd()
+   {
+    let str2="";
+    let num=document.getElementById('number').value;
+    if(num%2==0)
+    {
+       str2="the given number is even !";
+    }
+    else{
+        str2="the given number is odd !";
+    }
+      document.getElementById('result1').innerHTML=str2;
+   }
+
+    </script>
+</body>
+</html>

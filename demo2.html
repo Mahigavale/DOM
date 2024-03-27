@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basic.css">
+    <title>Live Time</title>
+</head>
+<body style="text-align: center;">
+    <div class="div1">
+        <button class="button button5" onclick="displayTime()">Click!</button>
+        <h2 id="time">Time will be displayed here!</h2>
+    </div>
+
+    <div class="prime" style="text-align: center; background-color: aquamarine;">
+        <h3>Please enter the number to check whether it is prime or not!</h3>
+        <input type="number" id="result" value="0">   
+        <button class="button button5" type="button" onclick="checkPrime()">Click me!</button>
+        <h4 id="demo">Result</h4>
+    </div>
+
+    <script>
+        function displayTime() {
+            const d = new Date();
+            document.getElementById('time').innerHTML = d.toLocaleTimeString();
+        }
+
+        function checkPrime() {
+            let num = parseInt(document.getElementById('result').value);
+            let flag = true;
+
+            if (num <= 1) {
+                flag = false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+
+            let resultMessage = flag ? "The given number is prime!" : "The number is not prime!";
+            document.getElementById('demo').innerHTML = resultMessage;
+        }
+    </script>
+</body>
+</html>
