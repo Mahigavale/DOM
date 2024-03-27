@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id selector</title>
+</head>
+<body>
+    <h1 id="h1">the first heading</h1>
+    <button type="button" onclick="changecolor()">click</button>
+    <h1 class="h2">the second heading</h2>
+    <h1 class="h2">the third heading</h3>
+    <h1 class="h2">the fourth heading </h4>
+        <button type="button" onclick="changetext()">click</button>
+
+<script>
+    function changecolor()
+    {
+document.getElementById('h1').innerHTML="dadasdadasdscda";
+    }
+
+    function changetext()
+    {
+       let count =1;
+
+       let text=document.getElementsByClassName('h2');
+       for(let i=0;i<text.length;i++)
+       {
+        text[i].innerHTML="the dadadadada here !";
+
+        console.log(count++);
+       }
+    }
+</script>
+</html>
