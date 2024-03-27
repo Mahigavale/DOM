@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag</title>
+</head>
+<body>
+    <h1>Bond ! james bond.</h1>
+    <h1>name is bond , james bond!</h1>
+    <h1> Mr Bond</h1>
+    <h1>007</h1>
+    <h1>royal casino</h1>
+
+    <button type="button" onclick="tagselector()">click</button>
+
+    <script>
+
+        function tagselector()
+        {
+           let dc= document.getElementsByTagName('h1');
+
+           for(let i=0;i<dc.length;i++)
+           {
+            dc[i].innerHTML="Pinnak";
+           }
+        }
+    </script>
+</body>
+</html>
